@@ -186,12 +186,15 @@ body {
     justify-content: center; /* Center horizontally */
     text-align: center; /* Center text */
   }
+  
   .logo {
     position: absolute;
-    top: 20px; /* Adjust this value to control the vertical position */
-    left: 20px; /* Adjust this value to control the horizontal position */
+    top: 20px; /* Position the logo above the hero content */
+    left: 50%; /* Center the logo horizontally */
+    transform: translateX(-50%); /* Adjust horizontally to center */
     width: 170px; /* Adjust the width of your logo */
     height: auto;
+    z-index: 1; /* Bring the logo above other content */
   }
   .button-container {
     position: absolute;
