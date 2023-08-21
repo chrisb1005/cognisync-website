@@ -1,0 +1,36 @@
+.typing-section {
+    text-align: center;
+    font-size: 25px;
+    color: white;
+    padding: 50px;
+    width: auto;
+    height: 00px;
+  }
+  
+  #typing-text {
+    display: inline-block;
+    border-right: 2px solid #e85313;
+    padding-right: 5px;
+    animation: typing 2s steps(20), blink-caret 0.5s step-end infinite;
+   
+  }
+  
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+  @keyframes blink-caret {
+    from,
+    to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: #e85313;
+    }
+  }
+  
