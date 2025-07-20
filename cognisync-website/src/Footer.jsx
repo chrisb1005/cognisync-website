@@ -11,7 +11,7 @@ const Footer = () => {
       <div className="footer-contact">
         <p>Missouri, USA</p>
         
-        <p>816-977-1985 | chris.battle@cognisync.us</p>
+        <p>chris.battle@cognisync.us</p>
       </div>
     </footer>
   );

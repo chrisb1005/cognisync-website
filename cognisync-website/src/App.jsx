@@ -6,6 +6,7 @@ import ServicesSection from './ServicesSection.jsx';
 import ContactForm from './ContactForm.jsx';
 import Mission from './MissionStatement.jsx';
 import Footer from './Footer.jsx';
+import ChatbotComponent from './Chatbot.jsx';
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
       <div className='bg' id='vanta'></div>
       {/* <ThreeBackground /> */}
       <HeroSection />
+      <ChatbotComponent />
       <AboutUsSection />
       <Mission />
       <ServicesSection/>
