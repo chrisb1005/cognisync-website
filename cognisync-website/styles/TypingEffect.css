@@ -1,0 +1,85 @@
+/* desktop version*/
+
+.typing-section {
+  text-align: center;
+  font-size: 25px;
+  color: white;
+  padding: 50px;
+  width: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#typing-text {
+  display: inline-block;
+  overflow: hidden;
+  white-space: normal;
+  word-wrap: break-word;
+  border-right: 2px solid #e85313;
+  padding-right: 5px;
+  width: 100%;
+  animation: typing 6s steps(189), blink-caret 0.75s step-end infinite;
+}
+
+/* Typing animation from 0 to 189 characters */
+@keyframes typing {
+  from {
+    width: 0ch;
+  }
+  to {
+    width: 189ch;
+  }
+}
+
+/* Blinking caret effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #e85313;
+  }
+}
+
+@media(max-width: 768px){
+.typing-section {
+  text-align: center;
+  font-size: 18px; /* Decrease font size for smaller screens */
+  color: white;
+  padding: 30px; /* Decrease padding for smaller screens */
+  width: auto;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Ensure it doesn't exceed the screen width */
+}
+
+#typing-text {
+  display: inline-block;
+  border-right: 1px solid #e85313; /* Decrease border width for smaller screens */
+  padding-right: 3px; /* Decrease padding for smaller screens */
+  animation: typing 2s steps(15), blink-caret 0.5s step-end infinite;
+
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #e85313;
+  }
+}
+}

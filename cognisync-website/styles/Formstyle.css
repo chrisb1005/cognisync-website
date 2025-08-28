@@ -1,0 +1,134 @@
+/* desktop version */
+
+.contact-form {
+  border-radius: 100px;
+  padding: 40px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 650px;
+  margin: auto;
+}
+.form-whole{
+  background-color: #fff;
+}
+.form-group-row {
+  display: flex;
+  gap: 230px;
+}
+
+.h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #e85313;
+}
+
+.form-group {
+  margin-bottom: 5px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #555;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #333;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  background-color: #e85313;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #c63c0c;
+}
+
+
+@media(max-width: 768px){
+  .contact-form {
+    border-radius: 20px; /* Decrease border radius for a less rounded appearance */
+    padding: 2px; /* Decrease padding for smaller screens */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Adjust width to take full width on smaller screens */
+    max-width: 450px; /* Set a maximum width for better readability */
+    margin: auto;
+  }
+  
+  .form-whole {
+    background-color: #fff;
+  }
+  
+  .form-group-row {
+    display: flex;
+    flex-direction: column; /* Stack form groups on top of each other */
+    gap: 20px; /* Decrease gap for smaller screens */
+  }
+  
+  .h2 {
+    font-size: 20px; /* Decrease font size for smaller screens */
+    margin-bottom: 15px; /* Adjust margin for smaller screens */
+    color: #e85313;
+  }
+  
+  .form-group {
+    margin-bottom: 5px;
+    max-width: 100vw; /* Decrease margin for smaller screens */
+  }
+  
+  label {
+    font-weight: bold;
+    margin-bottom: 5px; /* Decrease margin for smaller screens */
+    color: #555;
+  }
+  
+  input,
+  textarea,
+  select {
+    width: 90%;
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    font-size: 14px;
+    color: #333;
+    box-sizing: border-box;
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  button {
+    background-color: #e85313;
+    color: #fff;
+    padding: 8px 16px; /* Decrease padding for smaller screens */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #c63c0c;
+  }
+
+}

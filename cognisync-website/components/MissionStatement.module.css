@@ -1,0 +1,56 @@
+.typingSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 50px;
+  font-size: 25px;
+  color: white;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  height: auto;
+  line-height: 1.5;
+  word-wrap: break-word;
+  word-break: break-word;
+  white-space: normal;
+  flex-direction: column;
+}
+
+.typingText {
+  display: inline;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.caret {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  background-color: #e85313;
+  margin-left: 2px;
+  animation: blinkCaret 0.7s step-end infinite;
+  vertical-align: bottom;
+}
+
+/* Caret blinking animation */
+@keyframes blinkCaret {
+  0%, 100% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #e85313;
+  }
+}
+
+@media (max-width: 768px) {
+  .typingSection {
+    padding: 30px;
+    font-size: 18px;
+  }
+
+  .typingText {
+    border-right: 1px solid #e85313;
+    padding-right: 3px;
+  }
+}
