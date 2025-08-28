@@ -238,12 +238,15 @@ body {
   
   .services-button,
   .signup-button {
+    display: inline-block;
+    width: auto;
+    white-space: nowrap;
     padding: 10px 20px;
-    margin: 10px;
+    margin: 20px;
     background-color: #e85313;
     color: #fff;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
   }
   
