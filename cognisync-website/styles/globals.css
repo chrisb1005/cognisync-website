@@ -57,16 +57,16 @@ body {
   
   .services-button,
   .signup-button {
-    display: inline-block;
-    width: auto;
-    white-space: nowrap;
-    padding: 10px 20px;
-    margin: 20px;
-    background-color: #e85313;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
+    display: inline-block !important;
+    width: auto !important;
+    white-space: nowrap !important;
+    padding: 10px 20px !important;
+    margin: 20px !important;
+    background-color: #e85313 !important;
+    color: #fff !important;
+    border: none !important;
+    border-radius: 8px !important;
+    cursor: pointer !important;
   }
   
   /* About Us section */
@@ -238,16 +238,16 @@ body {
   
   .services-button,
   .signup-button {
-    display: inline-block;
-    width: auto;
-    white-space: nowrap;
-    padding: 10px 20px;
-    margin: 20px;
-    background-color: #e85313;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
+    display: inline-block !important;
+    width: auto !important;
+    white-space: nowrap !important;
+    padding: 10px 20px !important;
+    margin: 20px !important;
+    background-color: #e85313 !important;
+    color: #fff !important;
+    border: none !important;
+    border-radius: 8px !important;
+    cursor: pointer !important;
   }
   
   /* ... (your existing code) ... */
