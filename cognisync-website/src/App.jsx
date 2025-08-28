@@ -1,12 +1,12 @@
 import React, { useEffect, useRef } from 'react';
 import TRUNK from 'vanta/src/vanta.dots.js';
-import HeroSection from './HeroSection.jsx';
-import AboutUsSection from './AboutUsSection.jsx';
-import ServicesSection from './ServicesSection.jsx';
-import ContactForm from './ContactForm.jsx';
-import Mission from './MissionStatement.jsx';
-import Footer from './Footer.jsx';
-import ChatbotComponent from './Chatbot.jsx';
+import HeroSection from '../components/HeroSection.jsx';
+import AboutUsSection from '../components/AboutUsSection.jsx';
+import ServicesSection from '../components/ServicesSection.jsx';
+import ContactForm from '../components/ContactForm.jsx';
+import Mission from '../components/MissionStatement.jsx';
+import Footer from '../components/Footer.jsx';
+
 
 
 function App() {
@@ -24,7 +24,6 @@ function App() {
       <div className='bg' id='vanta'></div>
       {/* <ThreeBackground /> */}
       <HeroSection />
-      <ChatbotComponent />
       <AboutUsSection />
       <Mission />
       <ServicesSection/>
