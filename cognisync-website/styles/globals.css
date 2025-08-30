@@ -68,7 +68,9 @@ h1, h2, h3 {
   font-size: 1rem;
   cursor: pointer;
   transition: all 0.3s ease;
-  white-space: nowrap; /* prevents text wrapping */
+  white-space: nowrap;
+  display: inline-block;
+  width: auto; /* prevents text wrapping */
 }
 
 .services-button:hover,
