@@ -1,374 +1,242 @@
-/* desktop version */
-/* Global styles */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    
-    box-sizing: border-box;
-  }
+/* ===========================
+   Global Styles
+=========================== */
 
-  html, body {
+body {
   margin: 0;
-  padding: 0;
-  width: 100%;
-  max-width: 100%;
-  overflow-x: hidden; /* 🚫 disables horizontal scroll */
+  font-family: 'Arial', sans-serif;
+  background-color: #0b0c10;
+  color: #ffffff;
+  line-height: 1.6;
 }
 
-* {
-  box-sizing: border-box;
+h1, h2, h3 {
+  margin: 0;
 }
-  /* Hero section */
-  .hero-section {
-    position: relative;
-    height: 80vh;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    
-  }
-  .logo {
-    position: absolute;
-    top: 20px; /* Adjust this value to control the vertical position */
-    left: 20px; /* Adjust this value to control the horizontal position */
-    width: 170px; /* Adjust the width of your logo */
-    height: auto;
-  }
-  .button-container {
-    position: absolute;
-    top: 30px;
-    right: 0px;
-    display: flex;
-    gap: 10px; /* Add some spacing between buttons */
-  }
-  
-  .hero-content {
-    text-align: center;
-    color: #fbfbfb;
-    width: 47.4666666%;
-    justify-content: left;
-  }
-  
-  .hero-buttons {
-    margin-top: 20px;
-  }
-  
-  .services-button,
-  .signup-button {
-    display: inline-block !important;
-    width: auto !important;
-    white-space: nowrap !important;
-    padding: 10px 20px !important;
-    margin: 20px !important;
-    background-color: #e85313 !important;
-    color: #fff !important;
-    border: none !important;
-    border-radius: 8px !important;
-    cursor: pointer !important;
-  }
-  
-  /* About Us section */
-  .about-us-section {
-    padding: 60px 0;
-    margin: 0;
-    background-color: #fff;
-    /* text-align: center; */
-    flex-direction: column;
-    justify-content: center;
-    display: flex;
-    align-items: center;
-  }
-  .abus-header{
-    text-align: center;
-    color: #e85313;
-    
-    
-  }
-  .abus-content{
-    font-size: 20px;
-    max-width: 50%;
-    text-align: center;
-    line-height: 1.7;
-  }
-  
-  /* Services section */
-  .services-section {
-    padding: 60px 0;
-    background-color: #fff;
-    text-align: center;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    flex-direction: column;
-  }
-  .services-container {
-    display: flex;
-    justify-content: center;
-    padding: 200px;
-    gap: 30px;
-  }
-  
-  .service-card {
-    background-color: #fcfbfb;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    width: 300px;
-  }
-  .service-description {
-    font-size: 1rem;
-    
-  }
-  
-  /* Contact form */
-  .contact-form {
-    padding: 100px 0;
-    background-color: #fff;
-    text-align: center;
-    justify-content: center;
-     /* Add a bottom border */
-  }
-  
-  .contact-form input,
-  .contact-form textarea {
-    
-    padding: 30px;
-    margin: 0 auto;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .contact-form button {
-    padding: 30px 50px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  .mission-statement{
-    width: auto;
-    height: 600px;
-    
+
+/* ===========================
+   Hero Section
+=========================== */
+
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+  padding: 20px;
+}
+
+.hero-section .logo {
+  max-width: 200px;
+  margin-bottom: 20px;
+}
+
+.hero-section h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero-section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  font-weight: 400;
+  color: #c5c6c7;
+}
+
+.hero-buttons,
+.button-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* ===========================
+   Buttons
+=========================== */
+
+.services-button,
+.signup-button {
+  background: #1f2833;
+  color: #ffffff;
+  border: 2px solid #66fcf1;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap; /* prevents text wrapping */
+}
+
+.services-button:hover,
+.signup-button:hover {
+  background: #45a29e;
+  border-color: #45a29e;
+  color: #0b0c10;
+}
+
+/* ===========================
+   Services Section
+=========================== */
+
+.services-section {
+  padding: 80px 20px;
+  background: #1f2833;
+  text-align: center;
+}
+
+.services-section h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #66fcf1;
+}
+
+.services-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.service-card {
+  background: #0b0c10;
+  border: 1px solid #45a29e;
+  border-radius: 12px;
+  padding: 30px;
+  width: 300px;
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-card h3 {
+  color: #66fcf1;
+  margin-bottom: 15px;
+}
+
+/* ===========================
+   Contact Section
+=========================== */
+
+.contact-section {
+  padding: 80px 20px;
+  background: #0b0c10;
+  text-align: center;
+}
+
+.contact-section h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #66fcf1;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: 1px solid #45a29e;
+  border-radius: 8px;
+  background: #1f2833;
+  color: #ffffff;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  background: #66fcf1;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+  background: #45a29e;
+  color: #0b0c10;
+}
+
+/* ===========================
+   Responsive Design
+=========================== */
+
+/* Tablets (<= 1024px) */
+@media (max-width: 1024px) {
+  .hero-section h1 {
+    font-size: 2.5rem;
   }
 
-  /* Add styles for the background container */
-.bg {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: -1; /* Place the background behind other content */
+  .hero-section h3 {
+    font-size: 1.25rem;
   }
-  /* Add these styles to your CSS */
-.footer {
-    background-color: #f9f9f9;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .footer-logo img {
-    width: 150px; /* Adjust the logo width as needed */
-  }
-  
-  .footer-contact p {
-    margin: 0;
-    text-align: right;
-    font-size: 18px;
-  }
-  
-  
-  
-  
 
-@media(max-width: 768px){
-/* Global styles */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* Hero section */
-  .hero-section {
-    position: relative;
-    height: 80vh;
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Center horizontally */
-    text-align: center; /* Center text */
-  }
-  
-  .logo {
-    position: absolute;
-    top: 20px; /* Position the logo above the hero content */
-    left: 50%; /* Center the logo horizontally */
-    transform: translateX(-50%); /* Adjust horizontally to center */
-    width: 170px; /* Adjust the width of your logo */
-    height: auto;
-    z-index: 1; /* Bring the logo above other content */
-  }
-  .button-container {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    display: flex;
-    gap: 10px; /* Add some spacing between buttons */
-    display: none;
-  }
-  
-  .hero-content {
-    text-align: center;
-    color: #fbfbfb;
-    width: 47.4666666%;
-    justify-content: left;
-  }
-  
-  .hero-buttons {
-    margin-top: 20px;
-    
-  }
-  
-  .services-button,
-  .signup-button {
-    display: inline-block !important;
-    width: auto !important;
-    white-space: nowrap !important;
-    padding: 10px 20px !important;
-    margin: 20px !important;
-    background-color: #e85313 !important;
-    color: #fff !important;
-    border: none !important;
-    border-radius: 8px !important;
-    cursor: pointer !important;
-  }
-  
-  /* ... (your existing code) ... */
-  
-  /* About Us section */
-  .about-us-section {
-    padding: 40px 0; /* Decrease padding for smaller screens */
-    background-color: #fff;
-    text-align: center;
-  }
-  
-  .abus-content {
-    font-size: 16px; /* Decrease font size for smaller screens */
-    max-width: 80%; /* Increase maximum width for better readability */
-    margin: 0 auto; /* Center the content */
-  }
-  .abus-header{
-    text-align: center;
-    color: #e85313;
-  }
-  
-  /* Services section */
-  .services-section {
-    padding: 40px 0; /* Decrease padding for smaller screens */
-    background-color: #fff;
-    text-align: center;
-  }
-  
-  .services-container {
-    display: flex;
-    flex-wrap: wrap; /* Allow services to wrap on smaller screens */
-    justify-content: center;
+  .services-list {
     gap: 20px;
-    padding: 20px; /* Decrease padding for smaller screens */
   }
-  
+
   .service-card {
-    width: 100%; /* Take up full width on smaller screens */
-    max-width: 300px;
+    width: 45%;
   }
-  .service-description {
+}
+
+/* Mobile (<= 768px) */
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+
+  .hero-section h3 {
+    font-size: 1.1rem;
+  }
+
+  .button-container,
+  .hero-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .service-card {
+    width: 100%;
+  }
+
+  .contact-form {
+    padding: 0 10px;
+  }
+}
+
+/* Small Phones (<= 480px) */
+@media (max-width: 480px) {
+  .hero-section h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-section h3 {
     font-size: 1rem;
   }
-  
-  /* ... (your existing code) ... */
-  
-  /* Contact form */
-  .contact-form {
-    padding: 40px 0; /* Decrease padding for smaller screens */
-    background-color: #fff;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .contact-form input,
-  .contact-form textarea {
-    width: 100%;
-    max-width: 500px;
-    padding: 10px;
-    display: block;
-    margin: 10px auto;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 14px; /* Decrease font size for smaller screens */
-  }
 
+  .services-button,
+  .signup-button,
   .contact-form button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  .mission-statement{
-    width: auto;
-    height: 1000px;
-    
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
   }
 
-  /* Add styles for the background container */
-.bg {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: -1; /* Place the background behind other content */
-  }
-  
-  /* ... (your existing code) ... */
-  
-  /* Footer */
-  .footer {
-    background-color: #f9f9f9;
-    padding: 10px; /* Decrease padding for smaller screens */
-    display: flex;
-    flex-direction: column; /* Stack content on top of each other */
-    align-items: center;
-  }
-  
-  .footer-logo img {
-    width: 120px; /* Decrease the logo width for smaller screens */
-    margin-bottom: 10px; /* Add some space below the logo */
-  }
-
-  *, *::before, *::after {
-  box-sizing: inherit;
-}
-
-/* input, textarea, select {
-  width: 100%;
-  max-width: 100%;
-} */
-  
-  .footer-contact p {
-    margin: 5px 0; /* Adjust margin for smaller screens */
-    text-align: center; /* Center contact information */
-    font-size: 14px; /* Decrease font size for smaller screens */
+  .service-card {
+    padding: 20px;
   }
 }
-  
