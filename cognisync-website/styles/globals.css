@@ -58,19 +58,19 @@ h1, h2, h3 {
    Buttons
 =========================== */
 
-.services-button,
-.signup-button {
-  background: #1f2833;
-  color: #ffffff;
-  border: 2px solid #66fcf1;
-  padding: 10px 20px;
-  border-radius: 8px;
-  font-size: 1rem;
+button.services-button,
+button.signup-button {
+  background: #1f2833 !important;
+  color: #ffffff !important;
+  border: 2px solid #66fcf1 !important;
+  padding: 10px 20px !important;
+  border-radius: 8px !important;
+  font-size: 1rem !important;
   cursor: pointer;
   transition: all 0.3s ease;
-  white-space: nowrap;
-  display: inline-block;
-  width: auto; /* prevents text wrapping */
+  white-space: nowrap !important;
+  width: auto !important;
+  display: inline-block !important;
 }
 
 .services-button:hover,
