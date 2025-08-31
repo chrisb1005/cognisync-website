@@ -172,8 +172,6 @@ footer {
 
 @media (max-width: 768px) {
   .logo {
-    max-width: 120px; /* shrink logo for small screens */
-    top: 10px;
-    left: 10px;
+    display: none;
   }
 }
