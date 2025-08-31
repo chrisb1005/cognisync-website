@@ -10,28 +10,32 @@ const HeroSection = () => {
       <div className='button-container'>
       <a href="#services-section">
       <button className='cb-header-services-button' style={{
-         background: "#1f2833",
-    color: "#ffffff",
-    border: "2px solid #66fcf1",
-    padding: "10px 20px",
-    borderRadius: "8px",
-    fontSize: "1rem",
-    cursor: "pointer",
-    display: "inline-block",
-    whiteSpace: "nowrap",
+        display: "inline-block",
+        width: "auto",
+        whiteSpace: "nowrap",
+        padding: "10px 20px",
+        margin: "20px",
+        backgroundColor: "#e85313",
+        color: "#fff",
+        border: "none",
+        borderRadius: "8px",
+        cursor: "pointer",
+        transition: "background-color 0.3s ease",
       }}>Our Services</button>
       </a>
       <a href="#contact-section">
           <button className="cb-header-signup-button"style={{
-             background: "#1f2833",
-    color: "#ffffff",
-    border: "2px solid #66fcf1",
-    padding: "10px 20px",
-    borderRadius: "8px",
-    fontSize: "1rem",
-    cursor: "pointer",
-    display: "inline-block",
-    whiteSpace: "nowrap",
+             display: "inline-block",
+        width: "auto",
+        whiteSpace: "nowrap",
+        padding: "10px 20px",
+        margin: "20px",
+        backgroundColor: "#e85313",
+        color: "#fff",
+        border: "none",
+        borderRadius: "8px",
+        cursor: "pointer",
+        transition: "background-color 0.3s ease",
           }}>Lets Chat!</button>
           </a>
       </div>
@@ -44,28 +48,32 @@ const HeroSection = () => {
         <div className="hero-buttons">
         <a href="#services-section">
           <button className="cb-header-services-button" style={{
-             background: "#1f2833",
-    color: "#ffffff",
-    border: "2px solid #66fcf1",
-    padding: "10px 20px",
-    borderRadius: "8px",
-    fontSize: "1rem",
-    cursor: "pointer",
-    display: "inline-block",
-    whiteSpace: "nowrap",
+             display: "inline-block",
+        width: "auto",
+        whiteSpace: "nowrap",
+        padding: "10px 20px",
+        margin: "20px",
+        backgroundColor: "#e85313",
+        color: "#fff",
+        border: "none",
+        borderRadius: "8px",
+        cursor: "pointer",
+        transition: "background-color 0.3s ease",
           }}>Our Services</button>
           </a>
           <a href="#contact-section">
           <button className="cb-header-signup-button"style={{
-             background: "#1f2833",
-    color: "#ffffff",
-    border: "2px solid #66fcf1",
-    padding: "10px 20px",
-    borderRadius: "8px",
-    fontSize: "1rem",
-    cursor: "pointer",
-    display: "inline-block",
-    whiteSpace: "nowrap",
+             display: "inline-block",
+        width: "auto",
+        whiteSpace: "nowrap",
+        padding: "10px 20px",
+        margin: "20px",
+        backgroundColor: "#e85313",
+        color: "#fff",
+        border: "none",
+        borderRadius: "8px",
+        cursor: "pointer",
+        transition: "background-color 0.3s ease",
           }}>Lets Chat!</button>
           </a>
         </div>
