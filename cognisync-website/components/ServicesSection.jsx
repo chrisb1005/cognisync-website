@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
-
+import styles from './ServicesSection.module.css';
 import TRUNK from 'vanta/src/vanta.globe';
 
 const ServicesSection = () => {
-  useEffect(()=>{
+  useEffect(() => {
     TRUNK({
-      el:'#services',
+      el: '#services',
       mouseControls: false,
       touchControls: false,
       scale: 1,
@@ -13,46 +13,39 @@ const ServicesSection = () => {
       minWidth: 300,
       backgroundColor: 0xffffff,
       color: 0x0,
+    });
+  }, []);
 
-
-    })
-  }, [])
   return (
-    <div className="services-section" id='services-section'>
-      <div className='services-header'><h1>Services</h1></div>
-      <div class="services-container"id='services'>
-  <div class="service-card">
-    <h2 class="service-title">Workflow Automation</h2>
-    <ul>
-    <li class="service-description">We streamline daily processes, cut manual work, and give your team back valuable time.</li>
+    <div className={styles.servicesSection} id='services-section'>
+      <div className={styles.servicesHeader}>
+        <h1>Services</h1>
+      </div>
+      <div className={styles.servicesContainer} id='services'>
+        <div className={styles.serviceCard}>
+          <h2 className={styles.serviceTitle}>Workflow Automation</h2>
+          <ul>
+            <li className={styles.serviceDescription}>We streamline daily processes, cut manual work, and give your team back valuable time.</li>
+            <li><strong>Why it matters:</strong> Free up your team to focus on growth, not repetitive busywork.</li>
+          </ul>
+        </div>
 
-<li><strong>Why it matters:</strong> Free up your team to focus on growth, not repetitive busywork.</li>
-</ul>
-  </div>
-  
-  <div class="service-card">
-    <h2 class="service-title">App & Tool Integration</h2>
-    <ul>
-    <li class="service-description">We connect your favorite apps and platforms so your team spends less time switching and more time creating.</li>
+        <div className={styles.serviceCard}>
+          <h2 className={styles.serviceTitle}>App & Tool Integration</h2>
+          <ul>
+            <li className={styles.serviceDescription}>We connect your favorite apps and platforms so your team spends less time switching and more time creating.</li>
+            <li><strong>Why it matters:</strong> No more broken processes or copy-paste chaos — your tools finally work together.</li>
+          </ul>
+        </div>
 
-<li><strong>Why it matters:</strong> No more broken processes or copy-paste chaos — your tools finally work together.</li>
-</ul>
-  </div>
-  
-  <div class="service-card">
-    <h2 class="service-title">Custom API Development</h2>
-    <ul>
-    <li class="service-description">We build lightweight, flexible APIs to connect the systems your business depends on.</li>
-    <span></span>
-    <span></span>
-
-<li><strong>Why it matters:</strong> Scale without limits by linking platforms in exactly the way your business needs.</li>
-</ul>
-  </div>
-  </div>
-
-
-      {/* Add your content for the Services section */}
+        <div className={styles.serviceCard}>
+          <h2 className={styles.serviceTitle}>Custom API Development</h2>
+          <ul>
+            <li className={styles.serviceDescription}>We build lightweight, flexible APIs to connect the systems your business depends on.</li>
+            <li><strong>Why it matters:</strong> Scale without limits by linking platforms in exactly the way your business needs.</li>
+          </ul>
+        </div>
+      </div>
     </div>
   );
 };

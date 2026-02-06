@@ -1,80 +1,29 @@
 import React from 'react';
-
+import styles from './HeroSection.module.css';
 import logoImage from '../logo/CogniSync-logos_white.png';
-
 
 const HeroSection = () => {
   return (
-    <div className="hero-section">
-      <img src={logoImage} alt="CogniSync Logo" className="logo" />
-      <div className='button-container'>
-      <a href="#services-section">
-      <button className='cb-header-services-button' style={{
-        display: "inline-block",
-        width: "auto",
-        whiteSpace: "nowrap",
-        padding: "10px 20px",
-        margin: "20px",
-        backgroundColor: "#e85313",
-        color: "#fff",
-        border: "none",
-        borderRadius: "8px",
-        cursor: "pointer",
-        transition: "background-color 0.3s ease",
-      }}>Our Services</button>
-      </a>
-      <a href="#contact-section">
-          <button className="cb-header-signup-button"style={{
-             display: "inline-block",
-        width: "auto",
-        whiteSpace: "nowrap",
-        padding: "10px 20px",
-        margin: "20px",
-        backgroundColor: "#e85313",
-        color: "#fff",
-        border: "none",
-        borderRadius: "8px",
-        cursor: "pointer",
-        transition: "background-color 0.3s ease",
-          }}>Lets Chat!</button>
-          </a>
+    <div className={styles.heroSection}>
+      <img src={logoImage} alt="CogniSync Logo" className={styles.logo} />
+      <div className={styles.buttonContainer}>
+        <a href="#services-section">
+          <button className={styles.headerButton}>Our Services</button>
+        </a>
+        <a href="#contact-section">
+          <button className={styles.headerButton}>Lets Chat!</button>
+        </a>
       </div>
-      
-      
-      
-      <div className="hero-content">
+
+      <div className={styles.heroContent}>
         <h1>CogniSync Integration Studio</h1>
         <h3>Empowering Efficiency: Connect your tools. Automate your work. Focus on growth.</h3>
-        <div className="hero-buttons">
-        <a href="#services-section">
-          <button className="cb-header-services-button" style={{
-             display: "inline-block",
-        width: "auto",
-        whiteSpace: "nowrap",
-        padding: "10px 20px",
-        margin: "20px",
-        backgroundColor: "#e85313",
-        color: "#fff",
-        border: "none",
-        borderRadius: "8px",
-        cursor: "pointer",
-        transition: "background-color 0.3s ease",
-          }}>Our Services</button>
+        <div className={styles.heroButtons}>
+          <a href="#services-section">
+            <button className={styles.headerButton}>Our Services</button>
           </a>
           <a href="#contact-section">
-          <button className="cb-header-signup-button"style={{
-             display: "inline-block",
-        width: "auto",
-        whiteSpace: "nowrap",
-        padding: "10px 20px",
-        margin: "20px",
-        backgroundColor: "#e85313",
-        color: "#fff",
-        border: "none",
-        borderRadius: "8px",
-        cursor: "pointer",
-        transition: "background-color 0.3s ease",
-          }}>Lets Chat!</button>
+            <button className={styles.headerButton}>Lets Chat!</button>
           </a>
         </div>
       </div>
