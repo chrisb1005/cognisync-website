@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CogniSync - Data Automation Agency</title>
+    <meta name="description" content="CogniSync: Workflow automation, custom API development, and intelligent app integration. Built by Chris for intelligent data management.">
+    <meta name="keywords" content="cognisync, automation, workflow, CRM, data management, API, app integration, CRM automation, intelligent workflows">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#1f0524">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/styles.css?v=2026-07-24">
+    <link rel="icon" href="/assets/cognisync-logo.svg" type="image/svg+xml">
+    <meta property="og:title" content="CogniSync - Data Automation Agency">
+    <meta property="og:description" content="Workflow automation, custom API development, and intelligent app integration. Built by Chris for intelligent data management.">
+    <meta property="og:image" content="https://cognisync.us/assets/cognisync-logo.svg">
+    <meta property="og:alt" content="CogniSync - Data Automation Agency">
+    <meta property="og:url" content="https://cognisync.us">
+    <meta property="og:site_meta" content="true">
+    <meta property="og:site_meta_title" content="CogniSync - Data Automation Agency">
+    <meta property="og:site_meta_description" content="Workflow automation, custom API development, and intelligent app integration. Built by Chris for intelligent data management.">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="/assets/cognisync-logo.svg" alt="CogniSync Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/services/">Our Services</a></li>
+                <li><a href="/about/">About Us</a></li>
+                <li><a href="/contact/">Lets Chat!</a></li>
+            </ul>
+        </nav>
+    </div>
+    <main>
+        <div class="hero">
+            <h1 class="hero-title">CogniSync Integration Studio</h1>
+            <p class="hero-description">Our mission is simple: give you the clarity and systems you need to scale smarter.</p>
+            <a href="/services/" class="btn btn-primary">View Services</a>
+            <a href="/contact/" class="btn btn-secondary">Start a Project</a>
+        </div>
+        <section class="about">
+            <h2>About CogniSync</h2>
+            <p>With experience across industries, our goal is simple: give you the clarity and systems you need to scale smarter.</p>
+            <div class="about-grid">
+                <div class="about-item">
+                    <h3>Our Mission</h3>
+                    <p>Help businesses eliminate manual work and focus on growth through powerful, custom-built automation systems.</p>
+                </div>
+            </div>
+        </section>
+        <section class="services">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Workflow Automation</h3>
+                    <p>Automate repetitive tasks with custom-built automation systems.</p>
+                    <a href="/services/" class="btn btn-primary">View Services</a>
+                </div>
+                <div class="service-card">
+                    <h3>App Integration</h3>
+                    <p>Integrate applications and APIs to create powerful workflows.</p>
+                    <a href="/services/" class="btn btn-primary">View Services</a>
+                </div>
+                <div class="service-card">
+                    <h3>Custom API Development</h3>
+                    <p>Build custom APIs for your applications and systems.</p>
+                    <a href="/services/" class="btn btn-primary">View Services</a>
+                </div>
+            </div>
+        </section>
+        <section class="portfolio">
+            <h2>See It In Action</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <h3>Business CRM Automation</h3>
+                    <p>Automated lead scoring, follow-up, and outreach for CRM clients.</p>
+                </div>
+                <div class="portfolio-item">
+                    <h3>Workflow Automation</h3>
+                    <p>Custom automation for repetitive tasks and business workflows.</p>
+                </div>
+            </div>
+        </section>
+        <section class="demo">
+            <h2>Clean Data Demo</h2>
+            <div class="demo-container">
+                <div class="demo-upload">
+                    <label for="file-upload">Upload CSV file</label>
+                    <input type="file" id="file-upload">
+                    <button class="btn btn-secondary" onclick="cleanData()">Clean My Data</button>
+                </div>
+                <div class="demo-output">
+                    <pre><code id="demo-output"></code></pre>
+                </div>
+            </div>
+        </section>
+        <section class="contact">
+            <h2>Let's Automate Your Growth</h2>
+            <form id="contact-form" onsubmit="sendForm(event)">
+                <div class="form-grid">
+                    <input type="text" name="name" placeholder="Full Name *" required>
+                    <input type="email" name="email" placeholder="Email Address *" required>
+                    <input type="text" name="subject" placeholder="Subject *" required>
+                    <textarea name="message" placeholder="How Can We Help You? *" required></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Submit Request</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-about">
+                <h3>COGNISYNC</h3>
+                <p>Your partner in data automation and integration solutions. We help businesses eliminate manual work and focus on growth through powerful, custom-built automation systems.</p>
+                <div class="footer-social">
+                    <a href="/services/" class="social-icon">𝕏</a>
+                    <a href="/about/" class="social-icon">in</a>
+                    <a href="/contact/" class="social-icon">&gt;</a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="/services/">Workflow Automation</a></li>
+                    <li><a href="/services/">App Integration</a></li>
+                    <li><a href="/services/">Custom API Development</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact</h3>
+                <ul>
+                    <li><a href="/contact/"><span>chris.battle@cognisync.us</span></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <a href="/about/">Privacy Policy</a>
+            <a href="/about/">Terms of Service</a>
+        </div>
+    </footer>
+    <script>
+        function sendForm(event) {
+            event.preventDefault();
+            const form = event.target;
+            const formData = new FormData(form);
+            fetch('/contact/send/', {
+                method: 'POST',
+                body: formData
+            }).then(res => res.json()).then(data => {
+                alert('Thank you for reaching out! We appreciate your input and will be back shortly.');
+                form.reset();
+            }).catch(err => alert('Contact form is not available at this time.'));
+        }
+        function cleanData() {
+            const fileInput = document.getElementById('file-upload');
+            if (fileInput.files.length > 0) {
+                const file = fileInput.files[0];
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                    const text = e.target.result;
+                    const lines = text.split('\n');
+                    const cleaned = lines.filter(line => line.trim()).map(line => line.replace(/[,]/g, ''));
+                    document.getElementById('demo-output').textContent = cleaned.slice(0, 100).join('\n');
+                };
+                reader.readAsText(file);
+            }
+        }
+    </script>
+</body>
+</html>

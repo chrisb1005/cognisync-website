@@ -1,0 +1,27 @@
+# Cognisync Automation Agents Requirements
+
+# Data Processing & Analysis
+pandas>=1.5.0
+numpy>=1.23.0
+
+# API Integration
+requests>=2.28.0
+python-dotenv>=1.0.0
+
+# Excel & Spreadsheet Support
+openpyxl>=3.0.0
+xlrd>=2.0.0
+
+# Web Scraping (Optional)
+beautifulsoup4>=4.12.0
+lxml>=4.9.0
+
+# Validation & Testing
+pytest>=7.4.0
+pytest-cov>=4.1.0
+
+# Logging & Monitoring
+python-json-logger>=2.0.0
+
+# Documentation Generation
+mkdocs>=1.4.0

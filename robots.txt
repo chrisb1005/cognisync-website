@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.cognisync.us/sitemap.xml
+
+# If you have sections to disallow, add them below, e.g.:
+# Disallow: /admin/
