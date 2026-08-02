@@ -1,0 +1,32 @@
+name: Lighthouse CI
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch: {}
+
+jobs:
+  lighthouse:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Run Lighthouse Audit (treosh/lighthouse-ci-action)
+        uses: treosh/lighthouse-ci-action@v8
+        with:
+          urls: 'https://cognisync.us'
+          opts: '--emulated-form-factor=mobile'
+          budget: |
+            performance: 50
+            accessibility: 50
+            seo: 50
+            best-practices: 50
+          uploadArtifacts: true
+          lhciVersion: '0.11.2'
+
+      - name: Upload lighthouse report
+        uses: actions/upload-artifact@v4
+        with:
+          name: lighthouse-reports
+          path: .lighthouseci/**
