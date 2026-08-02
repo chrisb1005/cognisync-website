@@ -50,6 +50,25 @@
       }]
     }
     </script>
+
+<style>
+/* Critical inline CSS: basic layout, typography, header/footer, buttons */
+:root{--bg:#fff;--fg:#0b0b0b;--accent:#1f0524;--muted:#666}
+html,body{height:100%;margin:0;font-family:Inter,Arial,Helvetica,sans-serif;color:var(--fg);background:var(--bg)}
+.container{max-width:1100px;margin:0 auto;padding:16px}
+nav ul{list-style:none;padding:0;display:flex;gap:12px}
+nav a{color:var(--accent);text-decoration:underline}
+.hero-title{font-size:2.25rem;margin:0 0 8px}
+.hero-description{margin:0 0 12px;color:var(--muted)}
+.btn{display:inline-block;padding:8px 14px;border-radius:6px;text-decoration:none}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-secondary{border:1px solid var(--accent);color:var(--accent);background:transparent}
+.services-grid,.portfolio-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+footer{border-top:1px solid #eee;margin-top:32px;padding:16px}
+.logo img{max-height:48px}
+@media(min-width:768px){.hero-title{font-size:3rem}}
+</style>
+
 </head>
 <body>
     <div class="container">
