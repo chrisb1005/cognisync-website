@@ -1,20 +1,22 @@
 {
-  "version": 2,
-  "builds": [
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "cd cognisync-website && npm install && npm run build",
+  "outputDirectory": "cognisync-website/dist",
+  "rewrites": [
     {
-      "src": "cognisync-website/package.json",
-      "use": "@vercel/static-build",
-      "config": { "distDir": "dist" }
+      "source": "/((?!.*\\..*).*)",
+      "destination": "/index.html"
     }
-  ],
-  "routes": [
-    { "handle": "filesystem" },
-    { "src": "^/(.*)$", "dest": "/index.html" }
   ],
   "headers": [
     {
-      "source": "^/(.*)",
-      "headers": [ { "key": "Cache-Control", "value": "public, max-age=3600, must-revalidate" } ]
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, must-revalidate"
+        }
+      ]
     }
   ]
 }
