@@ -11,17 +11,17 @@
   overflow: hidden;
   isolation: isolate;
   background:
-    radial-gradient(circle at 15% 12%, rgba(255, 222, 129, 0.24), transparent 32%),
-    radial-gradient(circle at 85% 70%, rgba(255, 137, 41, 0.24), transparent 36%),
+    radial-gradient(circle at 15% 12%, rgba(255, 222, 129, 0.28), transparent 28%),
+    radial-gradient(circle at 85% 70%, rgba(255, 137, 41, 0.28), transparent 34%),
     linear-gradient(140deg, #120401 0%, #3d1206 38%, #8f2f08 70%, #ffb14f 100%);
 }
 
 .heroSection::before {
   content: "";
   position: absolute;
-  inset: -18%;
-  background: radial-gradient(circle, rgba(255, 197, 87, 0.16), transparent 52%);
-  filter: blur(22px);
+  inset: -14%;
+  background: radial-gradient(circle, rgba(255, 197, 87, 0.22), transparent 54%);
+  filter: blur(28px);
   z-index: 0;
   pointer-events: none;
 }
@@ -30,17 +30,17 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.08));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.1));
   z-index: 0;
   pointer-events: none;
 }
 
 .lavaLayer {
   position: absolute;
-  inset: -18%;
-  filter: blur(34px);
-  opacity: 0.95;
-  z-index: 0;
+  inset: -16%;
+  filter: blur(20px);
+  opacity: 1;
+  z-index: 1;
   pointer-events: none;
 }
 
@@ -48,41 +48,42 @@
   position: absolute;
   border-radius: 50%;
   mix-blend-mode: screen;
-  opacity: 0.95;
-  animation: floatBlob 18s ease-in-out infinite alternate;
+  opacity: 0.98;
+  animation: floatBlob 13s ease-in-out infinite alternate;
   will-change: transform;
+  box-shadow: 0 20px 70px rgba(255, 124, 35, 0.28);
 }
 
 .blobOne {
-  width: 44vw;
-  height: 44vw;
-  min-width: 320px;
-  min-height: 320px;
-  left: 5%;
-  top: 8%;
-  background: radial-gradient(circle at 30% 30%, #fff4b3 0%, #ffd46a 42%, #ff8a1d 65%, #b73d06 100%);
+  width: 46vw;
+  height: 46vw;
+  min-width: 330px;
+  min-height: 330px;
+  left: 3%;
+  top: 6%;
+  background: radial-gradient(circle at 28% 26%, #fff6be 0%, #ffd56b 42%, #ff8d20 66%, #b73804 100%);
 }
 
 .blobTwo {
-  width: 34vw;
-  height: 34vw;
-  min-width: 260px;
-  min-height: 260px;
-  right: 8%;
-  top: 16%;
-  background: radial-gradient(circle at 28% 28%, #fff8c6 0%, #ffc85b 48%, #ff7b20 68%, #9e2a02 100%);
-  animation-delay: 2.4s;
+  width: 36vw;
+  height: 36vw;
+  min-width: 270px;
+  min-height: 270px;
+  right: 6%;
+  top: 14%;
+  background: radial-gradient(circle at 30% 28%, #fff8c9 0%, #ffc85b 48%, #ff7c1f 68%, #9f2802 100%);
+  animation-delay: 2.2s;
 }
 
 .blobThree {
-  width: 40vw;
-  height: 40vw;
-  min-width: 300px;
-  min-height: 300px;
-  left: 32%;
+  width: 42vw;
+  height: 42vw;
+  min-width: 310px;
+  min-height: 310px;
+  left: 30%;
   bottom: -12%;
-  background: radial-gradient(circle at 35% 24%, #fffbe0 0%, #ffe07a 45%, #ff8c1f 68%, #7a2104 100%);
-  animation-delay: 4.8s;
+  background: radial-gradient(circle at 34% 24%, #fffbe3 0%, #ffe07a 44%, #ff8f21 68%, #7b2104 100%);
+  animation-delay: 4.5s;
 }
 
 .logo {
@@ -174,13 +175,13 @@
     transform: translate3d(0, 0, 0) scale(1);
   }
   35% {
-    transform: translate3d(-3%, 3%, 0) scale(1.08);
+    transform: translate3d(-3.4%, 3.4%, 0) scale(1.1);
   }
   70% {
-    transform: translate3d(3.4%, -1.6%, 0) scale(0.96);
+    transform: translate3d(3.8%, -1.8%, 0) scale(0.95);
   }
   100% {
-    transform: translate3d(-1.6%, 2.8%, 0) scale(1.04);
+    transform: translate3d(-1.8%, 3.1%, 0) scale(1.04);
   }
 }
 
