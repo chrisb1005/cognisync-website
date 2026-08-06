@@ -1,63 +1,67 @@
 .servicesSection {
-  padding: 80px 20px;
-  background-color: #f5f5f5;
+  padding: 86px 20px;
+  background:
+    radial-gradient(circle at 84% 12%, rgba(255, 187, 0, 0.3), transparent 34%),
+    radial-gradient(circle at 8% 65%, rgba(255, 129, 45, 0.22), transparent 42%),
+    linear-gradient(180deg, #fff7e4 0%, #ffe8b8 100%);
   text-align: center;
   width: 100%;
 }
 
 .servicesHeader {
-  margin-bottom: 60px;
+  margin-bottom: 46px;
+}
+
+.servicesHeader p {
+  margin: 0 0 10px;
+  color: #b14b00;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.78rem;
+  font-weight: 700;
 }
 
 .servicesHeader h1 {
-  font-size: 2.5rem;
-  color: #333;
-  margin-bottom: 10px;
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: #4e1d05;
+  margin: 0;
 }
 
 .servicesContainer {
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 24px;
   flex-wrap: wrap;
   max-width: 1200px;
   margin: 0 auto;
-  position: relative;
-  z-index: 1;
 }
 
 .serviceCard {
-  background-color: #fff;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.95), rgba(255, 243, 212, 0.96));
+  border: 1px solid rgba(255, 170, 52, 0.45);
   padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  width: 300px;
+  border-radius: 20px;
+  box-shadow: 0 16px 32px rgba(120, 45, 0, 0.12);
+  width: 320px;
   text-align: left;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .serviceCard:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-.serviceCard h2 {
-  color: #e85313;
-  margin-top: 0;
-  margin-bottom: 15px;
-  font-size: 1.3rem;
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(120, 45, 0, 0.18);
 }
 
 .serviceTitle {
-  color: #e85313;
-  font-size: 1.3rem;
-  margin: 0 0 15px 0;
+  color: #d74f00;
+  font-size: 1.35rem;
+  margin: 0 0 15px;
 }
 
 .serviceDescription {
   font-size: 1rem;
   line-height: 1.6;
-  color: #555;
+  color: #5b3317;
   margin: 10px 0;
 }
 
@@ -70,31 +74,25 @@
 .serviceCard li {
   margin-bottom: 10px;
   line-height: 1.6;
-  color: #555;
+  color: #5b3317;
 }
 
 .serviceCard strong {
-  color: #333;
+  color: #3e1806;
 }
 
-/* Mobile responsive */
 @media (max-width: 768px) {
   .servicesSection {
-    padding: 40px 15px;
-  }
-
-  .servicesHeader h1 {
-    font-size: 1.8rem;
+    padding: 56px 15px;
   }
 
   .servicesContainer {
-    gap: 20px;
-    padding: 0;
+    gap: 16px;
   }
 
   .serviceCard {
     width: 100%;
-    max-width: 300px;
-    padding: 20px;
+    max-width: 340px;
+    padding: 24px;
   }
 }

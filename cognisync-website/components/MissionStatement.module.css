@@ -3,57 +3,51 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 50px;
-  font-size: 25px;
-  color: white;
+  padding: 70px 22px;
+  font-size: clamp(1.2rem, 2.3vw, 1.72rem);
+  color: #fffaf2;
   width: 100%;
-  max-width: 900px;
   margin: 0 auto;
-  height: auto;
-  line-height: 1.5;
-  word-wrap: break-word;
-  word-break: break-word;
-  white-space: normal;
-  flex-direction: column;
-  overflow-x: hidden;
+  line-height: 1.6;
   box-sizing: border-box;
+  background:
+    radial-gradient(circle at 18% 50%, rgba(255, 205, 86, 0.32), transparent 30%),
+    radial-gradient(circle at 80% 35%, rgba(255, 133, 43, 0.32), transparent 34%),
+    linear-gradient(130deg, #7d2310 0%, #c14a0f 55%, #ea7f1e 100%);
 }
 
 .typingText {
   display: inline;
   white-space: pre-wrap;
   word-break: break-word;
-  max-width: 100%;
+  max-width: 900px;
+  font-weight: 500;
+  text-shadow: 0 8px 24px rgba(53, 14, 0, 0.3);
 }
 
 .caret {
   display: inline-block;
   width: 2px;
   height: 1em;
-  background-color: #e85313;
+  background-color: #ffe38f;
   margin-left: 2px;
   animation: blinkCaret 0.7s step-end infinite;
   vertical-align: bottom;
 }
 
-/* Caret blinking animation */
 @keyframes blinkCaret {
-  0%, 100% {
-    border-color: transparent;
+  0%,
+  100% {
+    opacity: 0;
   }
   50% {
-    border-color: #e85313;
+    opacity: 1;
   }
 }
 
 @media (max-width: 768px) {
   .typingSection {
-    padding: 30px;
-    font-size: 18px;
-  }
-
-  .typingText {
-    border-right: 1px solid #e85313;
-    padding-right: 3px;
+    padding: 48px 18px;
+    font-size: 1.15rem;
   }
 }
