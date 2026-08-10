@@ -6,17 +6,17 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.cognisync.us/#services</loc>
+    <loc>https://www.cognisync.us/services/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.cognisync.us/#about</loc>
+    <loc>https://www.cognisync.us/about/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.cognisync.us/#contact</loc>
+    <loc>https://www.cognisync.us/contact/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
