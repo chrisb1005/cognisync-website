@@ -6,7 +6,7 @@ const HeroSection = () => {
     <>
       <nav className={styles.navbar}>
         <a href="#home" className={styles.navLogo}>
-          COGNISYNC.ai
+          cognisync.us
         </a>
         <div>
           <ul className={styles.navLinks}>
