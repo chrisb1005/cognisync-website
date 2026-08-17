@@ -1,37 +1,84 @@
 .aboutUsSection {
-  padding: 84px 20px;
-  background:
-    radial-gradient(circle at 10% 12%, rgba(255, 180, 69, 0.2), transparent 34%),
-    linear-gradient(180deg, #fffdf8 0%, #fff4df 100%);
-  text-align: center;
-}
-
-.abusHeader {
-  margin-bottom: 26px;
-}
-
-.abusHeader h1 {
-  font-size: clamp(2rem, 4.2vw, 3rem);
-  color: #c94b0a;
-  margin: 0;
-}
-
-.abusContent {
-  font-size: 1.1rem;
-  max-width: 780px;
+  padding: 6rem 2rem;
+  max-width: 1200px;
   margin: 0 auto;
+}
+
+.sectionHeader {
   text-align: center;
-  line-height: 1.85;
-  color: #5b3821;
-  text-wrap: balance;
+  margin-bottom: 3.5rem;
+}
+
+.sectionTag {
+  display: inline-block;
+  background: rgba(255, 107, 0, 0.1);
+  color: var(--primary);
+  padding: 0.4rem 1rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--dark);
+}
+
+.aboutContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.aboutText p {
+  font-size: 1.08rem;
+  color: var(--gray-700);
+  line-height: 1.8;
+  margin-bottom: 1.2rem;
+}
+
+.founderCard {
+  background: var(--gray-100);
+  border-radius: 16px;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.founderCard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary), transparent);
+}
+
+.founderCard h3 {
+  margin-bottom: 0.8rem;
+  font-size: 1.4rem;
+  color: var(--dark);
+}
+
+.founderCard p {
+  color: var(--gray-700);
+  line-height: 1.8;
 }
 
 @media (max-width: 768px) {
-  .aboutUsSection {
-    padding: 52px 15px;
+  .aboutContent {
+    grid-template-columns: 1fr;
   }
 
-  .abusContent {
-    font-size: 1rem;
+  .aboutUsSection {
+    padding: 4rem 1rem;
+  }
+
+  .sectionTitle {
+    font-size: 2rem;
   }
 }

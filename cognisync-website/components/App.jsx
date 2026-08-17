@@ -4,7 +4,6 @@ import HeroSection from './HeroSection';
 import AboutUsSection from './AboutUsSection';
 import ServicesSection from './ServicesSection';
 import ContactForm from './ContactForm';
-import Mission from './MissionStatement';
 import Footer from './Footer';
 
 const App = () => {
@@ -12,7 +11,6 @@ const App = () => {
     <div className={styles.App}>
       <HeroSection />
       <AboutUsSection />
-      <Mission />
       <ServicesSection />
       <ContactForm />
       <Footer />

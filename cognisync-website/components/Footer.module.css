@@ -1,48 +1,121 @@
 .footer {
-  background: linear-gradient(160deg, #2a1308 0%, #4a210f 55%, #7a330f 100%);
-  color: #ffe8c8;
-  padding: 38px 20px;
+  background: var(--dark);
+  padding: 4rem 2rem 2rem;
+}
+
+.footerGrid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footerBrandLogo {
+  font-size: 1.8rem;
+  color: #fff;
+  margin-bottom: 1rem;
+  display: block;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.footerBrand p {
+  color: var(--gray-300);
+  line-height: 1.8;
+  font-size: 0.95rem;
+}
+
+.socialLinks {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.socialLinks a {
+  width: 44px;
+  height: 44px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.socialLinks a:hover {
+  background: var(--primary);
+  transform: translateY(-3px);
+}
+
+.footerLinks h4 {
+  color: #fff;
+  margin-bottom: 1.2rem;
+  font-weight: 600;
+}
+
+.footerLinks ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footerLinks li {
+  margin-bottom: 0.8rem;
+  color: var(--gray-300);
+}
+
+.footerLinks a {
+  color: var(--gray-300);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.footerLinks a:hover {
+  color: var(--primary);
+}
+
+.footerBottom {
+  max-width: 1200px;
+  margin: 3rem auto 0;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 40px;
-  flex-wrap: wrap;
-  border-top: 1px solid rgba(255, 201, 118, 0.28);
 }
 
-.footerLogo {
-  flex: 0 0 auto;
+.footerBottom p {
+  color: var(--gray-300);
+  font-size: 0.9rem;
 }
 
-.footerLogo img {
-  width: 150px;
-  height: auto;
-  object-fit: contain;
+.footerBottomLinks {
+  display: flex;
+  gap: 1rem;
 }
 
-.footerContact {
-  text-align: right;
-  flex: 1 1 auto;
-}
-
-.footerContact p {
-  margin: 8px 0;
-  font-size: 1rem;
+.footerBottomLinks a {
+  color: var(--gray-300);
+  text-decoration: none;
+  font-size: 0.9rem;
 }
 
 @media (max-width: 768px) {
   .footer {
+    padding: 3rem 1rem 1.5rem;
+  }
+
+  .footerGrid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .footerBottom {
     flex-direction: column;
-    align-items: center;
+    gap: 1rem;
     text-align: center;
-    gap: 20px;
-  }
-
-  .footerContact {
-    text-align: center;
-  }
-
-  .footerLogo img {
-    width: 120px;
   }
 }

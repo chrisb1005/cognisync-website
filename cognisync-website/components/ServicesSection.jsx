@@ -3,37 +3,34 @@ import styles from './ServicesSection.module.css';
 
 const ServicesSection = () => {
   return (
-    <div className={styles.servicesSection} id="services-section">
+    <section className={styles.servicesSection} id="services">
       <div className={styles.servicesHeader}>
-        <p>What We Build</p>
-        <h1>Services</h1>
+        <span className={styles.sectionTag}>What We Do</span>
+        <h1>Our Services</h1>
       </div>
       <div className={styles.servicesContainer}>
         <div className={styles.serviceCard}>
+          <div className={styles.serviceIcon}>⚡</div>
           <h2 className={styles.serviceTitle}>Workflow Automation</h2>
-          <ul>
-            <li className={styles.serviceDescription}>We streamline daily processes, cut manual work, and give your team back valuable time.</li>
-            <li><strong>Why it matters:</strong> Free up your team to focus on growth, not repetitive busywork.</li>
-          </ul>
+          <p className={styles.serviceDescription}>Streamline daily processes and eliminate repetitive manual work. We build automated workflows that move data across your applications seamlessly.</p>
+          <span className={styles.serviceTag}>Data Processing &amp; Cleaning</span>
         </div>
 
         <div className={styles.serviceCard}>
-          <h2 className={styles.serviceTitle}>App and Tool Integration</h2>
-          <ul>
-            <li className={styles.serviceDescription}>We connect your favorite apps and platforms so your team spends less time switching and more time creating.</li>
-            <li><strong>Why it matters:</strong> No more broken processes or copy-paste chaos, your tools finally work together.</li>
-          </ul>
+          <div className={styles.serviceIcon}>🔗</div>
+          <h2 className={styles.serviceTitle}>App &amp; Tool Integration</h2>
+          <p className={styles.serviceDescription}>Connect your favorite apps and tools to reduce context switching. Create unified systems that communicate and share data automatically.</p>
+          <span className={styles.serviceTag}>API Development</span>
         </div>
 
         <div className={styles.serviceCard}>
+          <div className={styles.serviceIcon}>🔌</div>
           <h2 className={styles.serviceTitle}>Custom API Development</h2>
-          <ul>
-            <li className={styles.serviceDescription}>We build lightweight, flexible APIs to connect the systems your business depends on.</li>
-            <li><strong>Why it matters:</strong> Scale without limits by linking platforms in exactly the way your business needs.</li>
-          </ul>
+          <p className={styles.serviceDescription}>Build lightweight, flexible APIs that integrate your existing tools or power new applications. Custom solutions for unique data challenges.</p>
+          <span className={styles.serviceTag}>REST &amp; GraphQL</span>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

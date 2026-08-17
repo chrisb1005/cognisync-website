@@ -43,53 +43,51 @@ const ContactForm = () => {
 
 
   return (
-    <div className={styles.formWhole} id="contact-section">
+    <section className={styles.formWhole} id="contact">
+      <div className={styles.sectionHeader}>
+        <span className={styles.sectionTag}>Get in Touch</span>
+        <h2 className={styles.sectionTitle}>Let's Automate Your Growth</h2>
+        <p className={styles.sectionDescription}>Tell us about your data challenges. We'll create a custom automation solution tailored to your needs.</p>
+      </div>
+
       <div className={styles.contactForm}>
-        <h2 className={styles.h2}>Contact Us</h2>
-        <form onSubmit={handleSubmit}>
-          <div className={styles.formGroup}>
-            <label htmlFor="fullName">Full Name</label>
-            <input type="text" id="fullName" name="fullName" required />
+        <form onSubmit={handleSubmit} className={styles.contactGrid}>
+          <div className={styles.formGroupRow}>
+            <div className={styles.formGroup}>
+              <label htmlFor="fullName">Full Name *</label>
+              <input type="text" id="fullName" name="fullName" placeholder="John Doe" required />
+            </div>
+            <div className={styles.formGroup}>
+              <label htmlFor="email">Email Address *</label>
+              <input type="email" id="email" name="email" placeholder="john@company.com" required />
+            </div>
           </div>
 
           <div className={styles.formGroupRow}>
-            <div className={styles.formGroup}>
-              <label htmlFor="subject">Subject</label>
-              <input type="text" id="subject" name="subject" required />
-            </div>
-            <div className={styles.formGroup}>
-              <label htmlFor="email">Email</label>
-              <input type="email" id="email" name="email" required />
+            <div className={`${styles.formGroup} ${styles.fullWidth}`}>
+              <label htmlFor="subject">Subject *</label>
+              <input type="text" id="subject" name="subject" placeholder="Project Type (e.g., Data Cleaning, API Integration)" required />
             </div>
           </div>
 
           <div className={styles.formGroup}>
-            <label htmlFor="help">How Can We Help You?</label>
-            <textarea id="help" name="help" rows="4" required></textarea>
+            <label htmlFor="help">How Can We Help You? *</label>
+            <textarea id="help" name="help" rows="4" placeholder="Describe your data automation challenge..." required></textarea>
           </div>
 
-          {/* <div className={styles.formGroup}>
-            <label htmlFor="budget">Anticipated Budget</label>
-            <select id="budget" name="budget">
-              <option value="under-3000">Under $3000</option>
-              <option value="3000-to-6000">$3000 - $6000</option>
-              <option value="6000-to-10000">$6000 - $10000</option>
-              <option value="10000-to-20000">$10000 - $20000</option>
-              <option value="20000-plus">Over $20000</option>
-            </select>
-          </div> */}
-
-          <button type="submit" disabled={submitting}>
-            {submitting ? 'Submitting...' : 'Submit'}
-          </button>
+          <div className={styles.formSubmitWrap}>
+            <button type="submit" disabled={submitting}>
+              {submitting ? 'Submitting...' : 'Submit Request'}
+            </button>
+          </div>
         </form>
         {showToast && (
-  <div className={`${styles.toast} ${styles[toastType]}`}>
-    {submissionMessage}
-  </div>
-)}
+          <div className={`${styles.toast} ${styles[toastType]}`}>
+            {submissionMessage}
+          </div>
+        )}
       </div>
-    </div>
+    </section>
   );
 };
 

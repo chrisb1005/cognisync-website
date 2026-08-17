@@ -1,19 +1,19 @@
 .typingSection {
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   text-align: center;
   padding: 70px 22px;
   font-size: clamp(1.2rem, 2.3vw, 1.72rem);
-  color: #fffaf2;
+  color: #f0f2ff;
   width: 100%;
   margin: 0 auto;
   line-height: 1.6;
   box-sizing: border-box;
   background:
-    radial-gradient(circle at 18% 50%, rgba(255, 205, 86, 0.32), transparent 30%),
-    radial-gradient(circle at 80% 35%, rgba(255, 133, 43, 0.32), transparent 34%),
-    linear-gradient(130deg, #7d2310 0%, #c14a0f 55%, #ea7f1e 100%);
+    radial-gradient(circle at 18% 50%, rgba(255, 107, 0, 0.2), transparent 40%),
+    radial-gradient(circle at 80% 35%, rgba(255, 107, 0, 0.18), transparent 44%),
+    linear-gradient(130deg, #101124 0%, #181a39 55%, #1f2043 100%);
 }
 
 .typingText {
@@ -22,14 +22,14 @@
   word-break: break-word;
   max-width: 900px;
   font-weight: 500;
-  text-shadow: 0 8px 24px rgba(53, 14, 0, 0.3);
+  text-shadow: none;
 }
 
 .caret {
   display: inline-block;
   width: 2px;
   height: 1em;
-  background-color: #ffe38f;
+  background-color: #ff8c3b;
   margin-left: 2px;
   animation: blinkCaret 0.7s step-end infinite;
   vertical-align: bottom;

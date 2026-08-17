@@ -1,40 +1,53 @@
 import React from 'react';
 import styles from './HeroSection.module.css';
-import logoImage from '../logo/CogniSync-logos_white.png';
 
 const HeroSection = () => {
   return (
-    <div className={styles.heroSection}>
-      <div className={styles.lavaLayer} aria-hidden="true">
-        <span className={`${styles.blob} ${styles.blobOne}`}></span>
-        <span className={`${styles.blob} ${styles.blobTwo}`}></span>
-        <span className={`${styles.blob} ${styles.blobThree}`}></span>
-      </div>
-
-      <img src={logoImage} alt="CogniSync Logo" className={styles.logo} />
-      <div className={styles.buttonContainer}>
-        <a href="#services-section">
-          <button className={styles.headerButton}>Our Services</button>
+    <>
+      <nav className={styles.navbar}>
+        <a href="#home" className={styles.navLogo}>
+          COGNISYNC.ai
         </a>
-        <a href="#contact-section">
-          <button className={styles.headerButton}>Lets Chat!</button>
-        </a>
-      </div>
-
-      <div className={styles.heroContent}>
-        <p className={styles.kicker}>Automation Studio</p>
-        <h1>CogniSync Integration Studio</h1>
-        <h3>Empowering Efficiency: Connect your tools. Automate your work. Focus on growth.</h3>
-        <div className={styles.heroButtons}>
-          <a href="#services-section">
-            <button className={styles.headerButton}>Our Services</button>
-          </a>
-          <a href="#contact-section">
-            <button className={styles.headerButton}>Lets Chat!</button>
-          </a>
+        <div>
+          <ul className={styles.navLinks}>
+            <li><a href="#services" className={styles.navCta}>Our Services</a></li>
+            <li><a href="#about" className={styles.navCta}>About Us</a></li>
+            <li><a href="#contact" className={styles.navCta}>Lets Chat!</a></li>
+          </ul>
         </div>
-      </div>
-    </div>
+      </nav>
+
+      <section className={styles.heroSection} id="home">
+        <div className={styles.heroGrid}>
+          <div className={styles.heroContent}>
+            <h1>CogniSync <span>Integration</span> Studio</h1>
+            <p><strong>Empowering Efficiency:</strong> Connect your tools. Automate your work. Focus on growth.</p>
+            <div className={styles.heroButtons}>
+              <a href="#services">
+                <button className={styles.primaryButton}>View Services</button>
+              </a>
+              <a href="#contact">
+                <button className={styles.secondaryButton}>Start a Project</button>
+              </a>
+            </div>
+          </div>
+
+          <div className={styles.heroGraphic} aria-hidden="true">
+            <div className={styles.freeBlobs}>
+              <div className={`${styles.freeBlob} ${styles.freeBlobA}`}></div>
+              <div className={`${styles.freeBlob} ${styles.freeBlobB}`}></div>
+            </div>
+            <div className={styles.lavaBlobField}>
+              <div className={`${styles.lavaBlob} ${styles.blobA}`}></div>
+              <div className={`${styles.lavaBlob} ${styles.blobB}`}></div>
+              <div className={`${styles.lavaBlob} ${styles.blobC}`}></div>
+              <div className={styles.lavaGlow}></div>
+            </div>
+          </div>
+        </div>
+        <div className={styles.scrollIndicator}>↓</div>
+      </section>
+    </>
   );
 };
 

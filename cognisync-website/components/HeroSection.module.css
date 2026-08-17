@@ -1,219 +1,387 @@
-.heroSection {
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(13, 13, 26, 0.95);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  padding: 1rem 2rem;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
+}
+
+.navLogo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+}
+
+.navLinks {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.navLinks a {
+  color: #e8e8ed;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: var(--transition);
+}
+
+.navLinks a:hover {
+  color: var(--primary);
+}
+
+.navCta {
+  background: var(--primary);
+  color: #fff;
+  padding: 0.6rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.navCta:hover {
+  background: var(--primary-dark);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.heroSection {
   min-height: 100vh;
-  color: #fff9f1;
-  text-align: center;
+  background: linear-gradient(135deg, #0d0d1a 0%, #1a1a3e 100%);
+  display: flex;
+  align-items: center;
+  padding: 8rem 2rem 4rem;
   position: relative;
-  padding: 24px;
   overflow: hidden;
-  isolation: isolate;
-  background:
-    radial-gradient(circle at 15% 12%, rgba(255, 222, 129, 0.28), transparent 28%),
-    radial-gradient(circle at 85% 70%, rgba(255, 137, 41, 0.28), transparent 34%),
-    linear-gradient(140deg, #120401 0%, #3d1206 38%, #8f2f08 70%, #ffb14f 100%);
 }
 
 .heroSection::before {
   content: "";
   position: absolute;
-  inset: -14%;
-  background: radial-gradient(circle, rgba(255, 197, 87, 0.22), transparent 54%);
-  filter: blur(28px);
-  z-index: 0;
+  top: -20%;
+  right: -10%;
+  width: 60%;
+  height: 120%;
+  background: radial-gradient(circle, rgba(255, 107, 0, 0.12) 0%, transparent 70%);
   pointer-events: none;
 }
 
-.heroSection::after {
-  content: "";
+.heroGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  align-items: center;
+}
+
+.heroContent {
+  color: #fff;
+}
+
+.heroContent h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+
+.heroContent h1 span {
+  color: var(--primary);
+}
+
+.heroContent p {
+  font-size: 1.2rem;
+  color: #d0d0df;
+  margin-bottom: 2rem;
+  max-width: 500px;
+}
+
+.heroContent p strong {
+  color: #fff;
+}
+
+.heroButtons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.primaryButton,
+.secondaryButton {
+  padding: 0.95rem 1.7rem;
+  border-radius: 8px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.primaryButton {
+  background: var(--primary);
+  color: #fff;
+}
+
+.primaryButton:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 107, 0, 0.4);
+}
+
+.secondaryButton {
+  background: transparent;
+  color: #fff;
+  border: 2px solid #d0d0df;
+}
+
+.secondaryButton:hover {
+  background: #f5f5fa;
+  color: #0d0d1a;
+  transform: translateY(-2px);
+}
+
+.heroGraphic {
+  position: relative;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.freeBlobs {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.1));
-  z-index: 0;
-  pointer-events: none;
-}
-
-.lavaLayer {
-  position: absolute;
-  inset: -16%;
-  filter: blur(20px);
-  opacity: 1;
   z-index: 1;
   pointer-events: none;
 }
 
-.blob {
+.freeBlob {
   position: absolute;
   border-radius: 50%;
-  mix-blend-mode: screen;
-  opacity: 0.98;
-  animation: floatBlob 13s ease-in-out infinite alternate;
-  will-change: transform;
-  box-shadow: 0 20px 70px rgba(255, 124, 35, 0.28);
+  background: radial-gradient(circle at 30% 30%, #ff9a34, #b84a00);
+  box-shadow: 0 0 55px rgba(202, 82, 9, 0.48);
+  filter: blur(1px);
+  opacity: 1;
+  mix-blend-mode: normal;
+  transform-origin: center;
 }
 
-.blobOne {
-  width: 46vw;
-  height: 46vw;
-  min-width: 330px;
-  min-height: 330px;
-  left: 3%;
-  top: 6%;
-  background: radial-gradient(circle at 28% 26%, #fff6be 0%, #ffd56b 42%, #ff8d20 66%, #b73804 100%);
+.freeBlobA {
+  width: 132px;
+  height: 132px;
+  top: 24px;
+  left: 8px;
+  animation: driftA 15s ease-in-out infinite alternate;
 }
 
-.blobTwo {
-  width: 36vw;
-  height: 36vw;
-  min-width: 270px;
-  min-height: 270px;
-  right: 6%;
-  top: 14%;
-  background: radial-gradient(circle at 30% 28%, #fff8c9 0%, #ffc85b 48%, #ff7c1f 68%, #9f2802 100%);
-  animation-delay: 2.2s;
+.freeBlobB {
+  width: 98px;
+  height: 98px;
+  bottom: 44px;
+  right: 18px;
+  animation: driftB 13.5s ease-in-out infinite alternate;
 }
 
-.blobThree {
-  width: 42vw;
-  height: 42vw;
-  min-width: 310px;
-  min-height: 310px;
-  left: 30%;
-  bottom: -12%;
-  background: radial-gradient(circle at 34% 24%, #fffbe3 0%, #ffe07a 44%, #ff8f21 68%, #7b2104 100%);
-  animation-delay: 4.5s;
+.lavaBlobField {
+  height: 340px;
+  position: relative;
+  overflow: visible;
+  z-index: 2;
 }
 
-.logo {
+.lavaBlob {
   position: absolute;
-  top: 20px;
+  border-radius: 46% 54% 58% 42%;
+  background: radial-gradient(circle at 30% 30%, #ffab3f, #b94a00);
+  box-shadow: 0 0 44px rgba(194, 68, 4, 0.62);
+  filter: blur(0.2px);
+  mix-blend-mode: normal;
+  z-index: 2;
+}
+
+.blobA {
+  width: 138px;
+  height: 138px;
   left: 20px;
-  max-width: 186px;
-  height: auto;
-  object-fit: contain;
-  z-index: 12;
+  bottom: 22px;
+  animation: riseA 12.5s ease-in-out infinite;
 }
 
-.buttonContainer {
-  position: absolute;
-  top: 22px;
+.blobB {
+  width: 108px;
+  height: 108px;
   right: 20px;
-  display: flex;
-  gap: 12px;
-  z-index: 12;
+  bottom: 26px;
+  animation: riseB 11.5s ease-in-out infinite 0.8s;
 }
 
-.heroContent {
-  text-align: center;
-  max-width: 860px;
-  position: relative;
-  z-index: 6;
+.blobC {
+  width: 86px;
+  height: 86px;
+  left: 98px;
+  bottom: 10px;
+  animation: riseC 13.5s ease-in-out infinite 1.3s;
 }
 
-.kicker {
-  margin: 0 0 14px;
-  text-transform: uppercase;
-  letter-spacing: 0.24em;
-  font-size: 0.8rem;
-  font-weight: 700;
-  color: #ffeab8;
+.lavaGlow {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 35% 25%, rgba(255, 219, 142, 0.25), transparent 45%),
+    radial-gradient(circle at 70% 70%, rgba(255, 107, 0, 0.2), transparent 52%);
+  pointer-events: none;
+  z-index: 4;
 }
 
-.heroContent h1 {
-  font-size: clamp(2.3rem, 5vw, 4.4rem);
-  line-height: 1.02;
-  margin: 0 0 18px;
-  letter-spacing: -0.02em;
-  text-shadow: 0 10px 34px rgba(70, 20, 0, 0.45);
+.scrollIndicator {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #e8e8ed;
+  font-size: 2rem;
+  animation: bounce 2s infinite;
 }
 
-.heroContent h3 {
-  font-size: clamp(1.05rem, 2.1vw, 1.55rem);
-  font-weight: 500;
-  margin: 0 auto 38px;
-  color: #fff3d8;
-  line-height: 1.6;
-  max-width: 760px;
+@keyframes riseA {
+  0% {
+    transform: translateY(0) scale(1);
+    border-radius: 46% 54% 58% 42%;
+  }
+  48% {
+    transform: translateY(-190px) scale(1.06);
+    border-radius: 58% 42% 50% 50%;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    border-radius: 46% 54% 58% 42%;
+  }
 }
 
-.heroButtons {
-  margin-top: 8px;
-  display: flex;
-  gap: 16px;
-  justify-content: center;
-  flex-wrap: wrap;
+@keyframes riseB {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  45% {
+    transform: translateY(-165px) scale(1.08);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+  }
 }
 
-.headerButton {
-  display: inline-block;
-  width: auto;
-  white-space: nowrap;
-  padding: 11px 22px;
-  margin: 0;
-  border: 1px solid rgba(255, 243, 208, 0.65);
-  border-radius: 999px;
-  cursor: pointer;
-  font-size: 0.98rem;
-  font-weight: 700;
-  color: #4b1605;
-  background: linear-gradient(180deg, #fff4c1 0%, #ffd46b 45%, #ff9d2b 100%);
-  box-shadow: 0 10px 28px rgba(54, 13, 0, 0.26);
-  transition: transform 0.2s ease, filter 0.2s ease;
-  position: relative;
-  z-index: 8;
+@keyframes riseC {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  52% {
+    transform: translateY(-220px) scale(0.95);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+  }
 }
 
-.headerButton:hover {
-  transform: translateY(-2px);
-  filter: brightness(1.06);
-}
-
-@keyframes floatBlob {
+@keyframes driftA {
   0% {
     transform: translate3d(0, 0, 0) scale(1);
   }
-  35% {
-    transform: translate3d(-3.4%, 3.4%, 0) scale(1.1);
+  100% {
+    transform: translate3d(24px, -30px, 0) scale(1.08);
   }
-  70% {
-    transform: translate3d(3.8%, -1.8%, 0) scale(0.95);
+}
+
+@keyframes driftB {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
   }
   100% {
-    transform: translate3d(-1.8%, 3.1%, 0) scale(1.04);
+    transform: translate3d(-22px, 26px, 0) scale(0.9);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateReverse {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  40% {
+    transform: translateX(-50%) translateY(-10px);
+  }
+  60% {
+    transform: translateX(-50%) translateY(-5px);
+  }
+}
+
+@media (max-width: 900px) {
+  .heroGrid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .heroButtons {
+    justify-content: center;
   }
 }
 
 @media (max-width: 768px) {
+  .navbar {
+    padding: 1rem;
+  }
+
+  .navLinks {
+    display: none;
+  }
+
+  .heroContent h1 {
+    font-size: 2.5rem;
+  }
+
   .heroSection {
-    padding: 20px 16px 32px;
+    padding: 6rem 1.5rem 3rem;
   }
 
-  .logo {
-    position: relative;
-    top: 0;
-    left: 0;
-    max-width: 146px;
-    margin-bottom: 14px;
+  .heroGrid {
+    grid-template-columns: 1fr;
   }
 
-  .buttonContainer {
-    position: relative;
-    top: 0;
-    right: 0;
-    margin-bottom: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
+  .heroGraphic {
+    height: 280px;
   }
 
-  .heroButtons {
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-  }
-
-  .headerButton {
-    width: 220px;
+  .lavaBlobField {
+    height: 260px;
   }
 }
