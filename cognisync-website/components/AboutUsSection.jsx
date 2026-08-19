@@ -6,7 +6,7 @@ const AboutUsSection = () => {
     <section className={styles.aboutUsSection} id="about">
       <div className={styles.sectionHeader}>
         <span className={styles.sectionTag}>Who We Are</span>
-        <h1 className={styles.sectionTitle}>About CogniSync</h1>
+        <h2 className={styles.sectionTitle}>About CogniSync</h2>
       </div>
 
       <div className={styles.aboutContent}>

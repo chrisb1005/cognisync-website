@@ -6,7 +6,7 @@ const ServicesSection = () => {
     <section className={styles.servicesSection} id="services">
       <div className={styles.servicesHeader}>
         <span className={styles.sectionTag}>What We Do</span>
-        <h1>Our Services</h1>
+        <h2>Our Services</h2>
       </div>
       <div className={styles.servicesContainer}>
         <div className={styles.serviceCard}>
