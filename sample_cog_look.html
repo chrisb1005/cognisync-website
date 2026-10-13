@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CogniSync.us - Data Automation Agency</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #1a1a2e;
+        }
+
+        /* Color Palette */
+        :root {
+            --primary: #ff6b00;
+            --primary-dark: #e55c00;
+            --dark: #0d0d1a;
+            --light: #ffffff;
+            --gray-100: #f5f5fa;
+            --gray-300: #e8e8ed;
+            --gray-700: #666b80;
+            --transition: all 0.3s ease;
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(13, 13, 26, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--light);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--gray-300);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .nav-cta {
+            background: var(--primary) !important;
+            color: var(--light) !important;
+            padding: 0.6rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600 !important;
+        }
+
+        .nav-cta:hover {
+            background: var(--primary-dark) !important;
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #0d0d1a 0%, #1a1a3e 100%);
+            display: flex;
+            align-items: center;
+            padding: 8rem 2rem 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -20%;
+            right: -10%;
+            width: 60%;
+            height: 120%;
+            background: radial-gradient(circle, rgba(255,107,0,0.1) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+            align-items: center;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--light);
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-content h1 span {
+            color: var(--primary);
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            color: var(--gray-300);
+            margin-bottom: 2rem;
+            max-width: 500px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: var(--light);
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255,107,0,0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--light);
+            border: 2px solid var(--gray-300);
+        }
+
+        .btn-secondary:hover {
+            background: var(--gray-100);
+            color: var(--dark);
+            transform: translateY(-2px);
+        }
+
+        /* Data visualization graphic */
+        .hero-graphic {
+            position: relative;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .data-network {
+            width: 300px;
+            height: 300px;
+            position: relative;
+        }
+
+        .node {
+            position: absolute;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary), #ff8c00);
+            box-shadow: 0 0 30px rgba(255,107,0,0.6);
+        }
+
+        .node-center {
+            width: 40px;
+            height: 40px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+        }
+
+        .node-ring {
+            width: 60px;
+            height: 60px;
+            top: calc(50% - 30px);
+            left: calc(50% - 30px);
+            border: 2px dashed rgba(255,107,0,0.4);
+            animation: rotate 20s linear infinite;
+        }
+
+        .node-outer {
+            width: 90px;
+            height: 90px;
+            top: calc(50% - 45px);
+            left: calc(50% - 45px);
+            border: 2px dashed rgba(255,107,0,0.2);
+            animation: rotateReverse 30s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: translate(-50%, -50%) rotate(0deg); }
+            to { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+
+        @keyframes rotateReverse {
+            from { transform: translate(-50%, -50%) rotate(360deg); }
+            to { transform: translate(-50%, -50%) rotate(0deg); }
+        }
+
+        /* About Section */
+        .section {
+            padding: 6rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-tag {
+            display: inline-block;
+            background: rgba(255,107,0,0.1);
+            color: var(--primary);
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 1rem;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text p {
+            font-size: 1.1rem;
+            color: var(--gray-700);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .founder-card {
+            background: var(--gray-100);
+            padding: 2rem;
+            border-radius: 16px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .founder-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), transparent);
+        }
+
+        .founder-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+
+        .founder-card p {
+            color: var(--gray-700);
+            line-height: 1.8;
+        }
+
+        /* Services Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--light);
+            border: 2px solid var(--gray-300);
+            border-radius: 16px;
+            padding: 2.5rem;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .service-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .service-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, rgba(255,107,0,0.1), rgba(255,107,0,0.05));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+
+        .service-card p {
+            color: var(--gray-700);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .service-tag {
+            display: inline-block;
+            background: rgba(255,107,0,0.1);
+            color: var(--primary-dark);
+            padding: 0.3rem 0.8rem;
+            border-radius: 5px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: var(--gray-100);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), transparent);
+        }
+
+        .contact-form-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--light);
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.2rem;
+        }
+
+        .form-group.full-width {
+            grid-column: span 2;
+        }
+
+        label {
+            display: block;
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.9rem 1.2rem;
+            border: 2px solid var(--gray-300);
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: var(--transition);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(255,107,0,0.1);
+        }
+
+        textarea.form-control {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            padding: 4rem 2rem 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-brand .logo {
+            font-size: 1.8rem;
+            color: var(--light);
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .footer-brand p {
+            color: var(--gray-300);
+            line-height: 1.8;
+            font-size: 0.95rem;
+        }
+
+        .footer-links h4 {
+            color: var(--light);
+            margin-bottom: 1.2rem;
+            font-weight: 600;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            color: var(--gray-300);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--primary);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-links a {
+            width: 44px;
+            height: 44px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--light);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 3rem auto 0;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-bottom p {
+            color: var(--gray-300);
+            font-size: 0.9rem;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 1rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .about-content,
+            .services-grid,
+            .form-grid,
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .hero {
+                padding: 6rem 1.5rem 3rem;
+            }
+        }
+
+        /* Smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Scroll indicator */
+        .scroll-indicator {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            color: var(--gray-300);
+            font-size: 2rem;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+            40% { transform: translateX(-50%) translateY(-10px); }
+            60% { transform: translateX(-50%) translateY(-5px); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="#home" class="logo">COGNISYNC.us</a>
+        <ul class="nav-links">
+            <li><a href="#services" class="nav-cta">Our Services</a></li>
+            <li><a href="#about" class="nav-cta">About Us</a></li>
+            <li><a href="#contact" class="btn btn-primary nav-cta">Lets Chat!</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-grid">
+            <div class="hero-content">
+                <h1>CogniSync <span>Integration Studio</span></h1>
+                <p><strong>Empowering Efficiency:</strong> Connect your tools. Automate your work. Focus on growth.</p>
+                <div class="hero-buttons">
+                    <a href="#services" class="btn btn-primary">View Services</a>
+                    <a href="#contact" class="btn btn-secondary">Start a Project</a>
+                </div>
+            </div>
+            <div class="hero-graphic">
+                <div class="data-network">
+                    <div class="node node-center"></div>
+                    <div class="node node-ring"></div>
+                    <div class="node node-outer"></div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">â</div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="section-header">
+            <span class="section-tag">Who We Are</span>
+            <h2 class="section-title">About CogniSync</h2>
+        </div>
+        <div class="about-content">
+            <div class="about-text">
+                <p>At <strong>CogniSync</strong>, we're your partner in turning ideas into real, working solutions. We focus on startups and agencies that want to move fast without getting stuck in technical roadblocks.</p>
+                <p>More than just integration specialists, we help teams simplify operations, connect their tools, and launch with confidence. Led by founder <strong>Christopher Battle</strong>, we work alongside you from concept to execution â making sure your workflows, automations, and integrations are built for growth, not just for today.</p>
+                <p>With experience across industries, our goal is simple: give you the clarity and systems you need to scale smarter.</p>
+            </div>
+            <div class="founder-card">
+                <h3>ð¯ Our Mission</h3>
+                <p>To empower businesses with powerful automation solutions that eliminate manual work, reduce errors, and free teams to focus on what matters most â innovation and growth.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section" id="services">
+        <div class="section-header">
+            <span class="section-tag">What We Do</span>
+            <h2 class="section-title">Our Services</h2>
+        </div>
+        <div class="services-grid">
+            <!-- Service 1 -->
+            <div class="service-card">
+                <div class="service-icon">â¡</div>
+                <h3>Workflow Automation</h3>
+                <p>Streamline daily processes and eliminate repetitive manual work. We build automated workflows that move data across your applications seamlessly.</p>
+                <span class="service-tag">Data Processing & Cleaning</span>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="service-card">
+                <div class="service-icon">ð</div>
+                <h3>App & Tool Integration</h3>
+                <p>Connect your favorite apps and tools to reduce context switching. Create unified systems that communicate and share data automatically.</p>
+                <span class="service-tag">API Development</span>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="service-card">
+                <div class="service-icon">ð</div>
+                <h3>Custom API Development</h3>
+                <p>Build lightweight, flexible APIs that integrate your existing tools or power new applications. Custom solutions for unique data challenges.</p>
+                <span class="service-tag">REST & GraphQL</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="section-header">
+            <span class="section-tag">Get in Touch</span>
+            <h2 class="section-title">Let's Automate Your Growth</h2>
+            <p style="text-align: center; color: var(--gray-700); font-size: 1.1rem; max-width: 600px; margin: 0 auto;">Tell us about your data challenges. We'll create a custom automation solution tailored to your needs.</p>
+        </div>
+        <div class="contact-form-container">
+            <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" style="display: grid; gap: 1rem;">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" class="form-control" placeholder="John Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" class="form-control" placeholder="john@company.com" required>
+                    </div>
+                </div>
+                <div class="form-grid">
+                    <div class="form-group full-width">
+                        <label for="subject">Subject *</label>
+                        <input type="text" id="subject" name="subject" class="form-control" placeholder="Project Type (e.g., Data Cleaning, API Integration)" required>
+                    </div>
+                </div>
+                <div class="form-group full-width">
+                    <label for="message">How Can We Help You? *</label>
+                    <textarea id="message" name="message" class="form-control" placeholder="Describe your data automation challenge..." required></textarea>
+                </div>
+                <div style="text-align: center;">
+                    <button type="submit" class="btn btn-primary" style="cursor: pointer; padding: 1rem 3rem;">Submit Request</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="#home" class="logo">COGNISYNC.us</a>
+                <p>Your partner in data automation and integration solutions. We help businesses eliminate manual work and focus on growth through powerful, custom-built automation systems.</p>
+                <div class="social-links">
+                    <a href="https://twitter.com" target="_blank" aria-label="Twitter">ð</a>
+                    <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">in</a>
+                    <a href="https://github.com" target="_blank" aria-label="GitHub">&gt;</a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="#services#workflow-automation">Workflow Automation</a></li>
+                    <li><a href="#services#app-integration">App Integration</a></li>
+                    <li><a href="#services#api-development">Custom API Development</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Contact</h4>
+                <ul>
+                    <li><strong>Email:</strong> <a href="mailto:chris.battle@cognisync.us" style="color: var(--gray-300); text-decoration: none;">chris.battle@cognisync.us</a></li>
+                    <li><strong>Location:</strong> Missouri, USA</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 CogniSync.us. All rights reserved.</p>
+            <div style="display: flex; gap: 1rem;">
+                <a href="#" style="color: var(--gray-300); text-decoration: none; font-size: 0.9rem;">Privacy Policy</a>
+                <a href="#" style="color: var(--gray-300); text-decoration: none; font-size: 0.9rem;">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Form submission handler (replace with your backend)
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thanks for your request! We\\'ll get back to you within 24 hours.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>

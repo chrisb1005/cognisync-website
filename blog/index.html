@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- INLINE_CRITICAL_CSS -->
+<style>
+/* Critical inline CSS: basic layout, typography, header/footer, buttons */
+:root{--bg:#fff;--fg:#0b0b0b;--accent:#1f0524;--muted:#666}
+html,body{height:100%;margin:0;font-family:Inter,Arial,Helvetica,sans-serif;color:var(--fg);background:var(--bg)}
+.container{max-width:1100px;margin:0 auto;padding:16px}
+nav ul{list-style:none;padding:0;display:flex;gap:12px}
+nav a{color:var(--accent);text-decoration:underline}
+.hero-title{font-size:2.25rem;margin:0 0 8px}
+.hero-description{margin:0 0 12px;color:var(--muted)}
+.btn{display:inline-block;padding:8px 14px;border-radius:6px;text-decoration:none}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-secondary{border:1px solid var(--accent);color:var(--accent);background:transparent}
+.services-grid,.portfolio-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+footer{border-top:1px solid #eee;margin-top:32px;padding:16px}
+.logo img{max-height:48px}
+@media(min-width:768px){.hero-title{font-size:3rem}}
+</style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Blog — Cognisync</title>
+<link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+<div class="container">
+<h1>Blog</h1>
+<div class="posts">
+<article class="card"><h2><a href="/public/posts/20261007T163339Z-how-small-agencies-save-time-with-data-automation-with-client-examples.html">How Small Agencies Save Time with Data Automation (with client examples)</a></h2><p>title: "How Small Agencies Save Time with Data Automation (with client examples)"
+date: "2026-10-07T16:33:39Z"
+tags:
+  - "automation"
+  - "data-efficiency"
+  - "reporting"
+  - "lead-enrichment"
+  - "case-study"</p></article>
+</div>
+<p><a href="/">Back to home</a></p>
+</div>
+</body>
+</html>
