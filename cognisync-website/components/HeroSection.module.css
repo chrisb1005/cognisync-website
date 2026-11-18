@@ -377,6 +377,15 @@
     grid-template-columns: 1fr;
   }
 
+  .heroButtons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .heroButtons button {
+    width: 100%;
+  }
+
   .heroGraphic {
     height: 280px;
   }

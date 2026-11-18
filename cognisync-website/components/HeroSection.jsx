@@ -12,6 +12,7 @@ const HeroSection = () => {
           <ul className={styles.navLinks}>
             <li><a href="#services" className={styles.navCta}>Our Services</a></li>
             <li><a href="#about" className={styles.navCta}>About Us</a></li>
+            <li><a href="https://playground.cognisync.us" className={styles.navCta} target="_blank" rel="noopener noreferrer">AI Playground</a></li>
             <li><a href="#contact" className={styles.navCta}>Lets Chat!</a></li>
           </ul>
         </div>
@@ -25,6 +26,9 @@ const HeroSection = () => {
             <div className={styles.heroButtons}>
               <a href="#services">
                 <button className={styles.primaryButton}>View Services</button>
+              </a>
+              <a href="https://playground.cognisync.us" target="_blank" rel="noopener noreferrer">
+                <button className={styles.primaryButton}>Try the AI Playground</button>
               </a>
               <a href="#contact">
                 <button className={styles.secondaryButton}>Start a Project</button>

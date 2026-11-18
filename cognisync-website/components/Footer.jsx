@@ -21,6 +21,7 @@ const Footer = () => {
             <li><a href="#services#workflow-automation">Workflow Automation</a></li>
             <li><a href="#services#app-integration">App Integration</a></li>
             <li><a href="#services#api-development">Custom API Development</a></li>
+            <li><a href="https://playground.cognisync.us" target="_blank" rel="noopener noreferrer">AI Playground</a></li>
           </ul>
         </div>
 
