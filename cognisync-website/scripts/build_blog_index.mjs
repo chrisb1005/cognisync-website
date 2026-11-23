@@ -1,4 +1,5 @@
 import { readFile, readdir, writeFile } from 'node:fs/promises'
+import { blogNavigation, blogStylesheet, blogStylesheetLink } from './blog_layout.mjs'
 
 const publicDir = new URL('../public/', import.meta.url)
 const blogDir = new URL('blog/', publicDir)
@@ -87,30 +88,11 @@ function renderIndex(articles) {
   <title>CogniSync Blog | Automation, Integrations &amp; Custom AI</title>
   <meta name="description" content="Explore practical guides from CogniSync on workflow automation, system integrations, custom APIs, and AI.">
   <link rel="canonical" href="${blogCanonical}">
-  <style>
-    body {
-      margin: 0;
-      background: #0d0d1a;
-      color: #e8e8ed;
-      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      line-height: 1.6;
-    }
-    main { max-width: 68ch; margin: auto; padding: clamp(1rem, 5vw, 3rem); }
-    h1, h2 { color: #f5f5fa; line-height: 1.25; }
-    nav { display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; }
-    a { color: #ff6b00; text-underline-offset: 0.15em; }
-    a:focus-visible { outline: 2px solid #ff6b00; outline-offset: 4px; }
-    article { margin-top: 1.5rem; padding: 1.25rem; background: #1a1a2e; }
-    article h2 { margin: 0; }
-    time { color: #d0d0df; }
-  </style>
+  ${blogStylesheetLink}
 </head>
 <body>
-<main>
-  <nav aria-label="Site navigation">
-    <a href="/">Home</a>
-    <a href="/#contact">Contact</a>
-  </nav>
+${blogNavigation}
+<main class="blog-index">
   <h1>CogniSync Blog</h1>
   <p>Read about workflow automation, system integrations, and custom AI for your business.</p>
 ${entries}
@@ -148,6 +130,7 @@ articles.sort((a, b) => (
 
 const check = process.argv.includes('--check')
 for (const [name, expected] of [
+  ['blog/blog.css', blogStylesheet],
   ['blog/index.html', renderIndex(articles)],
   ['sitemap.xml', renderSitemap(articles)],
 ]) {

@@ -7,6 +7,7 @@
     "dev": "vite",
     "prebuild": "node scripts/build_blog_index.mjs",
     "build": "vite build",
+    "postbuild": "node scripts/inject_blog_layout.mjs",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
