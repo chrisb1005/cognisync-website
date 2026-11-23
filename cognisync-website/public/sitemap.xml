@@ -6,6 +6,9 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://www.cognisync.us/blog/</loc>
+  </url>
+  <url>
     <loc>https://www.cognisync.us/blog/custom-api-development/</loc>
   </url>
 </urlset>
