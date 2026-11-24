@@ -21,7 +21,7 @@
 
 .navLinks {
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -52,6 +52,15 @@
   background: var(--primary-dark);
   color: #fff;
   transform: translateY(-2px);
+}
+
+.navCta:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 4px;
+}
+
+.mobileNav {
+  display: none;
 }
 
 .heroSection {
@@ -361,8 +370,30 @@
     padding: 1rem;
   }
 
-  .navLinks {
+  .desktopNav {
     display: none;
+  }
+
+  .mobileNav {
+    display: block;
+  }
+
+  .mobileNav summary {
+    cursor: pointer;
+  }
+
+  .mobileNav .navLinks {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1rem;
+    background: rgba(13, 13, 26, 0.95);
+  }
+
+  .navLinks a {
+    display: block;
   }
 
   .heroContent h1 {

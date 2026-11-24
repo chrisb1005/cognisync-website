@@ -2,20 +2,27 @@ import React from 'react';
 import styles from './HeroSection.module.css';
 
 const HeroSection = () => {
+  const navLinks = (
+    <ul className={styles.navLinks}>
+      <li><a href="#services" className={styles.navCta}>Our Services</a></li>
+      <li><a href="#about" className={styles.navCta}>About Us</a></li>
+      <li><a href="https://playground.cognisync.us" className={styles.navCta} target="_blank" rel="noopener noreferrer">AI Playground</a></li>
+      <li><a href="/blog/" className={styles.navCta}>Blog</a></li>
+      <li><a href="#contact" className={styles.navCta}>Lets Chat!</a></li>
+    </ul>
+  );
+
   return (
     <>
       <nav className={styles.navbar}>
         <a href="#home" className={styles.navLogo}>
           cognisync.us
         </a>
-        <div>
-          <ul className={styles.navLinks}>
-            <li><a href="#services" className={styles.navCta}>Our Services</a></li>
-            <li><a href="#about" className={styles.navCta}>About Us</a></li>
-            <li><a href="https://playground.cognisync.us" className={styles.navCta} target="_blank" rel="noopener noreferrer">AI Playground</a></li>
-            <li><a href="#contact" className={styles.navCta}>Lets Chat!</a></li>
-          </ul>
-        </div>
+        <div className={styles.desktopNav}>{navLinks}</div>
+        <details className={styles.mobileNav}>
+          <summary className={styles.navCta}>Menu</summary>
+          {navLinks}
+        </details>
       </nav>
 
       <section className={styles.heroSection} id="home">
