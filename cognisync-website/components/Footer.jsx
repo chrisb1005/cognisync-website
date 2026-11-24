@@ -37,6 +37,7 @@ const Footer = () => {
       <div className={styles.footerBottom}>
         <p>© 2024 CogniSync.us. All rights reserved.</p>
         <div className={styles.footerBottomLinks}>
+          <a href="/blog/">Blog</a>
           <a href="#">Privacy Policy</a>
           <a href="#">Terms of Service</a>
         </div>

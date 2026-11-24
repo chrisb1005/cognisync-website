@@ -103,6 +103,11 @@
   font-size: 0.9rem;
 }
 
+.footerBottomLinks a:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 4px;
+}
+
 @media (max-width: 768px) {
   .footer {
     padding: 3rem 1rem 1.5rem;

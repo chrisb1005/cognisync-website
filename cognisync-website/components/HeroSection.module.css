@@ -21,7 +21,7 @@
 
 .navLinks {
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -52,6 +52,15 @@
   background: var(--primary-dark);
   color: #fff;
   transform: translateY(-2px);
+}
+
+.navCta:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 4px;
+}
+
+.mobileNav {
+  display: none;
 }
 
 .heroSection {
@@ -359,10 +368,39 @@
 @media (max-width: 768px) {
   .navbar {
     padding: 1rem;
+    z-index: 50;
   }
 
-  .navLinks {
+  .desktopNav {
     display: none;
+  }
+
+  .mobileNav {
+    display: block;
+  }
+
+  .mobileNav summary {
+    cursor: pointer;
+  }
+
+  .mobileNav .navLinks {
+    position: absolute;
+    top: 100%;
+    right: 1rem;
+    z-index: 51;
+    box-sizing: border-box;
+    max-width: calc(100% - 2rem);
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1rem;
+    background: #0d0d1a;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(13, 13, 26, 0.4);
+  }
+
+  .navLinks a {
+    display: block;
   }
 
   .heroContent h1 {
